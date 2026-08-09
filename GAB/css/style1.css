@@ -1,0 +1,2213 @@
+
+/* ==============================
+      INICIO CSS MODIFICADO
+ ================================ */
+
+
+/* ============================================================
+   PÁGINA: INICIO (index.html)
+   (carrusel, banner, historia, sedes/tiendas, contadores,
+   sostenibilidad, noticias, testimonios, contacto rápido)
+============================================================ */
+
+/* ====================
+   Carrusel del home  
+ ======================*/
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ajuste de encuadre para fotos que se ven muy "cerca" o recortadas */
+.zoom-out img,
+.zoom-out.slide img {
+  transform: scale(0.82);
+  transform-origin: center;
+}
+
+/* ======================= 
+    Banner internacional  
+  ======================= */
+
+.banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+    url("../assets/img/banner-export.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 70px;
+  text-align: center;
+}
+
+.banner h2 {
+  margin-bottom: 10px;
+}
+
+/* ====================================================== 
+ Cards genéricas (usadas en Historia / Sedes del home) 
+ ========================================================*/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1b1b1b;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, .3);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 20px 20px 0;
+  font-size: 1.4rem;
+  color: #D4AF37;
+}
+
+.card p {
+  padding: 10px 20px 20px;
+}
+
+/* =================
+     Historia 
+  ================== */
+
+.historia {
+  background: #181818;
+  text-align: center;
+}
+
+.historia p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  white-space: pre-line;
+}
+
+/* ===================================
+     Sedes / tiendas en el mundo 
+====================================== */
+
+.negocios {
+  background: #111111;
+}
+
+.tiendas-mundo {
+  background: #181818;
+  margin-top: 60px;
+}
+
+.tiendas-mundo .card {
+  text-align: center;
+  padding: 30px;
+}
+
+.tiendas-mundo h3 {
+  font-size: 1.5rem;
+}
+
+/* ==========================
+      Contadores 
+  ===========================*/
+
+.contadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: #0b0b0b;
+  text-align: center;
+}
+
+.contador-box {
+  padding: 40px;
+}
+
+.contador-box h3 {
+  font-size: 4rem;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+.contador-box p {
+  font-size: 1.1rem;
+}
+
+/* ================= 
+    Sostenibilidad 
+  ================== */
+
+.sostenibilidad {
+  background:
+    linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
+    url("../assets/img/sostenibilidad.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.sostenibilidad p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  white-space: pre-line;
+}
+
+/* ==================================================
+      Productos (bloque destacado del home) 
+ ==================================================== */
+
+.productos {
+  background: #111111;
+}
+
+/* ================
+     Noticias 
+  ================= */
+
+.noticias {
+  background: #181818;
+}
+
+#noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+#noticias article {
+  background: #1b1b1b;
+  padding: 25px;
+  border-radius: 15px;
+  transition: .4s;
+}
+
+#noticias article:hover {
+  transform: translateY(-8px);
+}
+
+/* =====================
+      Testimonios 
+  ====================== */
+
+.testimonios {
+  background: #111111;
+}
+
+.testimonios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.testimonial {
+  background: #1b1b1b;
+  padding: 30px 25px;
+  border-radius: 15px;
+  margin: 0;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 260px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #D4AF37;
+  margin: 0 auto;
+  display: block;
+}
+
+.testimonial h4 {
+  margin-top: 15px;
+  color: #D4AF37;
+}
+
+/* =========================================
+      Contacto rápido (CTA del home) 
+  ========================================== */ 
+
+.contacto-rapido {
+  background: #181818;
+  text-align: center;
+}
+
+.contacto-rapido p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* =======================================
+     Responsive específico del home 
+  ======================================== */
+
+@media (max-width: 992px) {
+  .contadores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contadores {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   PÁGINA: GALERÍA (galeria.html)
+   (lightbox, filtros, fotos + carrito, precios, packs de oferta)
+============================================================ */
+
+/* ---- Lightbox (ampliar foto) ---- */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .95);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid #D4AF37;
+  border-radius: 10px;
+}
+
+/* ---- Filtros de galería ---- */
+
+.filtros {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filtros .btn {
+  margin: 0 6px 10px;
+  background: transparent;
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+}
+
+.filtros .btn:hover,
+.filtros .btn.activo {
+  background: #D4AF37;
+  color: black;
+}
+
+.filtros .btn.activo {
+  background: #D4AF37;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 0 3px #111111;
+}
+
+/* ---- Foto + botón añadir al carrito ---- */
+
+.foto {
+  position: relative;
+}
+
+.btn-carrito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .65);
+  color: #D4AF37;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  z-index: 5;
+}
+
+.btn-carrito:hover {
+  background: #D4AF37;
+  color: black;
+  transform: scale(1.1);
+}
+
+.btn-carrito.added {
+  background: #556B2F;
+  color: white;
+}
+
+/* ---- Badge flotante del carrito ---- */
+
+.carrito-flotante {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.carrito-boton {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: #D4AF37;
+  color: black;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+}
+
+.carrito-boton .badge-numero {
+  background: black;
+  color: #D4AF37;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+}
+
+.carrito-panel {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #181818;
+  border: 1px solid rgba(212, 175, 55, .4);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.carrito-panel.show {
+  display: block;
+}
+
+.carrito-panel h4 {
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  font-size: .9rem;
+}
+
+.carrito-item-nombre {
+  flex: 1;
+}
+
+.carrito-item-controles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carrito-item-controles button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: #D4AF37;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.carrito-vacio {
+  opacity: .7;
+  font-size: .9rem;
+}
+
+.carrito-panel-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(212, 175, 55, .4);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* ---- Precio + botón seleccionar (tarjeta de producto) ---- */
+
+.precio-box {
+  padding: 0 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  opacity: .6;
+  font-size: .95rem;
+}
+
+.precio-oferta,
+.precio-estandar {
+  color: #D4AF37;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.badge-oferta {
+  background: #556B2F;
+  color: white;
+  font-size: .7rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.btn-seleccionar {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #D4AF37;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-seleccionar:hover {
+  background: white;
+}
+
+.btn-seleccionar.added {
+  background: #556B2F;
+  color: white;
+}
+
+/* ============================================================
+   NUEVAS CARDS DE OFERTAS (ACEITES Y VINOS)
+============================================================ */
+
+.subtitulo {
+  text-align: center;
+  color: #ddd;
+  margin: -15px auto 45px;
+  max-width: 700px;
+  font-size: 1rem;
+}
+
+.cards-pack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.pack-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(212, 175, 55, .35);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: .35s;
+  text-align: center;
+}
+
+.pack-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, .30);
+  border-color: #D4AF37;
+}
+
+.pack-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  padding: 15px;
+  background: #111;
+}
+
+.pack-card h3 {
+  color: #D4AF37;
+  margin: 18px 0 10px;
+  font-size: 1.45rem;
+}
+
+.pack-card p {
+  color: #ddd;
+  margin: 0 20px 20px;
+}
+
+.pack-card .precio {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.pack-card .ahorro {
+  color: #9ad36d;
+  font-size: .9rem;
+  margin-bottom: 25px;
+}
+
+.pack-card button {
+  width: 85%;
+  margin-bottom: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 40px;
+  background: #D4AF37;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+  font-size: 1rem;
+}
+
+.pack-card button:hover {
+  background: #f0c541;
+  transform: scale(1.04);
+}
+
+@media(max-width: 768px) {
+  .cards-pack {
+    grid-template-columns: 1fr;
+  }
+
+  .pack-card img {
+    height: 240px;
+  }
+}
+
+/* ============================================================
+   PÁGINA: PRESUPUESTO (presupuesto.html)
+   (resumen del carrito, desglose de totales, entrega por ítem)
+============================================================ */
+
+.hero-presupuesto {
+  height: 60vh;
+  min-height: 400px;
+  background: url("../assets/img/carrusel/slide1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ============================
+   Resumen del carrito
+=============================== */
+
+.carrito-resumen {
+  background: #1b1b1b;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0 40px;
+}
+
+.carrito-resumen h3 {
+  color: #D4AF37;
+  margin-bottom: 15px;
+}
+
+#carrito-resumen-lista .carrito-item {
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.btn-quitar {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#carrito-descuento-info {
+  display: block;
+  margin-top: 15px;
+  color: #D4AF37;
+  font-size: .9rem;
+}
+
+/* ============================
+   Desglose total
+=============================== */
+
+.desglose-total {
+  max-width: 900px;
+  margin: 20px auto 0;
+  background: #1b1b1b;
+  border-radius: 15px;
+  padding: 20px 25px;
+}
+
+.desglose-total p {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+/* ============================
+   Entrega por ítem
+=============================== */
+
+.carrito-item-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.carrito-item-entrega {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: .8rem;
+  font-weight: normal;
+  opacity: .9;
+}
+
+.carrito-item-entrega select {
+  width: auto;
+  padding: 6px 10px;
+  margin: 0;
+  font-size: .8rem;
+  border-radius: 6px;
+}
+
+/* ============================================================
+   PÁGINA: CONTACTO (contacto.html)
+   (mapa, controles de ruta, mensajes de estado)
+============================================================ */
+
+.hero-contacto {
+  height: 60vh;
+  min-height: 400px;
+  background: url("../assets/img/centros-operativos/CENTRO-LOG-GENOVA2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* ============================
+   Controles del mapa
+=============================== */
+
+.controles-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controles-mapa label {
+  font-weight: bold;
+  color: #4a4130;
+}
+
+.controles-mapa select {
+  padding: 8px 12px;
+  border: 1px solid #c9a068;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fdfaf3;
+}
+
+/* ============================
+   Mensajes del mapa
+=============================== */
+
+.mensaje-mapa {
+  min-height: 20px;
+  font-size: 14px;
+  margin: 6px 0 14px;
+  color: #6b6045;
+}
+
+.mensaje-mapa.error {
+  color: #b23a3a;
+}
+
+.mensaje-mapa.ok {
+  color: #3a7d44;
+}
+
+/* ============================
+   Mapa (unificado)
+=============================== */
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+
+
+/* ==============================
+      FINE CSS MODIFICADO
+ ================================ */
+
+
+
+/* ==========================================
+   GETSEMANI A&B (GAB)
+   PREMIUM OLIVE OIL & WINES
+   Inspirado en Seiko Watches
+   -- CSS reordenado por página --
+========================================== */
+
+/* ============================================================
+   SISTEMA DE COLOR (CSS custom properties)
+   ------------------------------------------------------------
+   Se divide en dos grupos:
+
+   1) "CHROME" fijo — navbar, hero (con foto de fondo), footer,
+      botón de WhatsApp, lightbox, badge del carrito. Estos
+      elementos van siempre sobre una imagen oscurecida o un
+      fondo oscuro propio, así que su texto/dorado se mantiene
+      igual pase lo que pase con el tema claro de abajo.
+
+   2) "TEMA" del contenido — fondo de página, tarjetas, texto.
+      Este es el que cambia según la paleta elegida. Por defecto
+      está activo el tema original "Negro & Dorado". Si en algún
+      momento quieres probar una versión más clara, hay 3 paletas
+      ya listas más abajo: solo añade data-theme="toscana",
+      data-theme="mediterraneo" o data-theme="salvia" a la
+      etiqueta <body> de cada página.
+============================================================ */
+
+:root {
+  /* -- Chrome fijo (no cambia con el tema) -- */
+  --chrome-bg: #1c1712;
+  --chrome-bg-strong: rgba(20, 16, 12, .88);
+  --brand-gold: #D4AF37;
+  --brand-gold-light: #f0c541;
+  --brand-olive: #556B2F;
+  --on-dark-text: #f6f1e7;
+  --on-dark-border: rgba(212, 175, 55, .4);
+
+  /* -- Tema activo: paleta original "Negro & Dorado" -- */
+  --bg: #111111;
+  --bg-alt: #181818;
+  --bg-deep: #0b0b0b;
+  --bg-card: #1b1b1b;
+  --text: #ffffff;
+  --text-muted: #dddddd;
+  --heading-accent: #D4AF37;
+  --border-soft: rgba(212, 175, 55, .3);
+}
+
+/* -- Paleta A: "Crema Toscana" (clara, cálida) -- */
+
+[data-theme="toscana"] {
+  --bg: #faf6ee;
+  --bg-alt: #f1e9d8;
+  --bg-deep: #ece1c8;
+  --bg-card: #ffffff;
+  --text: #2b2620;
+  --text-muted: #6b6045;
+  --heading-accent: #9c7220;
+  --border-soft: rgba(43, 38, 32, .12);
+}
+
+/* -- Paleta B: "Blanco Mediterráneo" (clara, minimal, terracota) -- */
+[data-theme="mediterraneo"] {
+  --bg: #ffffff;
+  --bg-alt: #f5f4f0;
+  --bg-deep: #ecebe5;
+  --bg-card: #ffffff;
+  --text: #23262b;
+  --text-muted: #5b5f66;
+  --heading-accent: #a8571f;
+  --border-soft: rgba(35, 38, 43, .12);
+}
+
+/* -- Paleta C: "Verde Salvia" (fresca, botánica) -- */
+[data-theme="salvia"] {
+  --bg: #eef1e6;
+  --bg-alt: #f7f8f2;
+  --bg-deep: #dfe4d2;
+  --bg-card: #ffffff;
+  --text: #24301f;
+  --text-muted: #566148;
+  --heading-accent: #7c6222;
+  --border-soft: rgba(36, 48, 31, .14);
+}
+
+
+/* ============================================================
+   GLOBAL — COMÚN A TODAS LAS PÁGINAS
+   (reset, navbar, footer, botones, formularios base,
+   whatsapp, animaciones, responsive general)
+============================================================ */
+
+/* =============
+      Reset
+ =============== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ============================ 
+      Navbar / Logo / Menú 
+  ============================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  background: transparent;
+  transition: all .5s ease;
+  z-index: 9999;
+}
+
+.navbar.scrolled {
+  background: var(--chrome-bg-strong);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .4);
+  border-bottom: 1px solid var(--on-dark-border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 90px;
+  width: auto;
+  border-radius: 6px;
+  margin-top: 30px;
+}
+
+.logo-g {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--brand-gold);
+}
+
+.logo-text {
+  font-size: .75rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.menu {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--on-dark-text);
+  font-weight: 600;
+  transition: .4s;
+}
+
+.menu a:hover {
+  color: var(--brand-gold);
+}
+
+.activo {
+  color: var(--brand-gold) !important;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background: var(--on-dark-text);
+  transition: .3s;
+}
+
+/* ============================================================
+         Hero genérico (usado en varias páginas interiores) 
+ ============================================================== */
+
+.hero-galeria {
+  height: 60vh;
+  min-height: 400px;
+  background: url("../assets/img/GALE.PRESUP-CONT/index_carrusel_R\(4\)3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 20px;
+  animation: fadeHero 2s ease;
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  color: var(--brand-gold);
+  font-size: .9rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: var(--brand-gold);
+}
+
+.hero h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: var(--on-dark-text);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto auto 35px;
+  color: var(--on-dark-text);
+}
+
+/* ==================== 
+     Botón genérico 
+  ===================== */
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--brand-gold);
+  color: #1c1712;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: .4s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.btn-bloque {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.separador {
+  margin: 40px 0;
+  border: none;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* =======================================
+     Estructura genérica de secciones 
+ ========================================= */
+
+section {
+  padding: 50px 10%;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--heading-accent);
+}
+
+/* =========================================================
+     Formularios base (los usan Presupuesto y Contacto) 
+ =========================================================== */
+
+form {
+  max-width: 900px;
+  margin: auto;
+}
+
+form h3 {
+  color: var(--heading-accent);
+  margin-top: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.error {
+  display: block;
+  color: #c0392b;
+  margin-top: 5px;
+  font-size: .9rem;
+  min-height: 1.1em;
+}
+
+.form-actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+/* ============================================================
+    WhatsApp flotante (unifiqué los 2 duplicados que tenías) 
+ ============================================================== */
+
+.whatsapp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+  animation: pulse 2s infinite;
+}
+
+/* ========================
+      Botón volver arriba 
+ ========================== */
+
+#btnTop {
+  position: fixed;
+  bottom: 95px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand-gold);
+  color: #1c1712;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+
+/* ===============
+      Footer  
+  ================*/
+
+footer {
+  background: var(--chrome-bg);
+  color: var(--on-dark-text);
+  padding: 60px 10%;
+  border-top: 2px solid var(--brand-gold);
+  text-align: center;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+footer h3,
+footer h4 {
+  color: var(--brand-gold);
+  margin-bottom: 10px;
+}
+
+.social {
+  margin: 25px 0;
+}
+
+.social a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.social i {
+  font-size: 2rem;
+  margin: 0 12px;
+  cursor: pointer;
+  transition: .3s;
+  color: var(--on-dark-text);
+}
+
+.social i:hover {
+  color: var(--brand-gold);
+  transform: translateY(-3px);
+}
+
+.footer-legal {
+  font-size: .85rem;
+  opacity: .8;
+  margin-top: 10px;
+}
+
+/* ==================
+      Animaciones 
+ ==================== */
+
+@keyframes fadeHero {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==================================================
+      Responsive general (navbar / hero / menú) 
+ ==================================================== */
+
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: var(--chrome-bg);
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 70px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .btn {
+    padding: 12px 25px;
+  }
+}
+
+
+/* ============================================================
+   PÁGINA: INICIO (index.html)
+   (carrusel, banner, historia, sedes/tiendas, contadores,
+   sostenibilidad, noticias, testimonios, contacto rápido)
+============================================================ */
+
+/* ====================
+   Carrusel del home  
+ ======================*/
+
+.carousel {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+  overflow: hidden;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ajuste de encuadre para fotos que se ven muy "cerca" o recortadas */
+.zoom-out img,
+.zoom-out.slide img {
+  transform: scale(0.82);
+  transform-origin: center;
+}
+
+/* ======================= 
+    Banner internacional  
+  ======================= */
+
+.banner {
+  background:
+    linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+    url("../assets/img/banner-export.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 70px;
+  text-align: center;
+}
+
+.banner h2 {
+  margin-bottom: 10px;
+  color: var(--brand-gold);
+}
+
+.banner p {
+  color: var(--on-dark-text);
+}
+
+/* ====================================================== 
+ Cards genéricas (usadas en Historia / Sedes del home) 
+ ========================================================*/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, .25);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 20px 20px 0;
+  font-size: 1.4rem;
+  color: var(--heading-accent);
+}
+
+.card p {
+  padding: 10px 20px 20px;
+}
+
+/* =================
+     Historia 
+  ================== */
+
+.historia {
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.historia p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  white-space: pre-line;
+}
+
+/* ===================================
+     Sedes / tiendas en el mundo 
+====================================== */
+
+.negocios {
+  background: var(--bg);
+}
+
+.tiendas-mundo {
+  background: var(--bg-alt);
+  margin-top: 60px;
+}
+
+.tiendas-mundo .card {
+  text-align: center;
+  padding: 30px;
+}
+
+.tiendas-mundo h3 {
+  font-size: 1.5rem;
+}
+
+/* ==========================
+      Contadores 
+  ===========================*/
+
+.contadores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: var(--bg-deep);
+  text-align: center;
+}
+
+.contador-box {
+  padding: 40px;
+}
+
+.contador-box h3 {
+  font-size: 4rem;
+  color: var(--heading-accent);
+  margin-bottom: 10px;
+}
+
+.contador-box p {
+  font-size: 1.1rem;
+}
+
+/* ================= 
+    Sostenibilidad 
+  ================== */
+
+.sostenibilidad {
+  background:
+    linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
+    url("../assets/img/sostenibilidad.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.sostenibilidad h2 {
+  color: var(--brand-gold);
+}
+
+.sostenibilidad p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  white-space: pre-line;
+  color: var(--on-dark-text);
+}
+
+/* ==================================================
+      Productos (bloque destacado del home) 
+ ==================================================== */
+
+.productos {
+  background: var(--bg);
+}
+
+/* ================
+     Noticias 
+  ================= */
+
+.noticias {
+  background: var(--bg-alt);
+}
+
+#noticias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+#noticias article {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 25px;
+  border-radius: 15px;
+  transition: .4s;
+}
+
+#noticias article h3 {
+  color: var(--heading-accent);
+  margin-bottom: 8px;
+}
+
+#noticias article:hover {
+  transform: translateY(-8px);
+}
+
+.noticia-fecha {
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* =====================
+      Testimonios 
+  ====================== */
+.testimonios {
+  background: var(--bg);
+}
+
+.testimonios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.testimonial {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  padding: 30px 25px;
+  border-radius: 15px;
+  margin: 0;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+}
+
+.testimonial img {
+  width: 260px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand-gold);
+  margin: 0 auto;
+  display: block;
+}
+
+.testimonial h3 {
+  margin-top: 15px;
+  color: var(--heading-accent);
+}
+
+/* =========================================
+      Contacto rápido (CTA del home) 
+  ========================================== */ 
+
+.contacto-rapido {
+  background: var(--bg-alt);
+  text-align: center;
+}
+
+.contacto-rapido p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* =======================================
+     Responsive específico del home 
+  ======================================== */
+@media (max-width: 992px) {
+  .contadores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contadores {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ============================================================
+   PÁGINA: GALERÍA (galeria.html)
+   (lightbox, filtros, fotos + carrito, precios, packs de oferta)
+============================================================ */
+
+/* ---- Lightbox (ampliar foto) ---- */
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .95);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  cursor: zoom-out;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid var(--brand-gold);
+  border-radius: 10px;
+}
+
+/* ---- Filtros de galería ---- */
+
+.filtros {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filtros .btn.activo {
+  font-weight: 700;
+}
+
+
+.filtros .btn {
+  margin: 0 6px 10px;
+  background: transparent;
+  border: 2px solid var(--heading-accent);
+  color: var(--heading-accent);
+}
+
+.filtros .btn:hover,
+.filtros .btn.activo {
+  background: var(--brand-gold);
+  border-color: var(--brand-gold);
+  color: #1c1712;
+}
+
+/* ---- Foto + botón añadir al carrito ---- */
+
+.foto {
+  position: relative;
+}
+
+.btn-carrito {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .65);
+  color: var(--brand-gold);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  z-index: 5;
+}
+
+.btn-carrito:hover {
+  background: var(--brand-gold);
+  color: #1c1712;
+  transform: scale(1.1);
+}
+
+.btn-carrito.added {
+  background: var(--brand-olive);
+  color: white;
+}
+
+/* ---- Badge flotante del carrito ---- */
+
+.carrito-flotante {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.carrito-boton {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: var(--brand-gold);
+  color: #1c1712;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+}
+
+.carrito-boton .badge-numero {
+  background: var(--chrome-bg);
+  color: var(--brand-gold);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+}
+
+.carrito-panel {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.carrito-panel.show {
+  display: block;
+}
+
+.carrito-panel h4 {
+  color: var(--heading-accent);
+  margin-bottom: 15px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+  font-size: .9rem;
+}
+
+.carrito-item-nombre {
+  flex: 1;
+}
+
+.carrito-item-controles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carrito-item-controles button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: var(--brand-gold);
+  color: #1c1712;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.carrito-vacio {
+  opacity: .7;
+  font-size: .9rem;
+}
+
+.carrito-panel-footer {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* ---- Precio + botón seleccionar (tarjeta de producto) ---- */
+
+.precio-box {
+  padding: 0 20px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  opacity: .6;
+  font-size: .95rem;
+}
+
+.precio-oferta {
+  color: var(--heading-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.precio-estandar {
+  color: var(--heading-accent);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.badge-oferta {
+  background: var(--brand-olive);
+  color: white;
+  font-size: .7rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+.btn-seleccionar {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: var(--brand-gold);
+  color: #1c1712;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-seleccionar:hover {
+  background: var(--brand-gold-light);
+}
+
+.btn-seleccionar.added {
+  background: var(--brand-olive);
+  color: white;
+}
+
+/* ---- Packs / ofertas de aceite ---- */
+
+/* ============================================================
+   NUEVAS CARDS DE OFERTAS (ACEITES Y VINOS)
+============================================================ */
+
+.subtitulo{
+    text-align:center;
+    color: var(--text-muted);
+    margin:-15px auto 45px;
+    max-width:700px;
+    font-size:1rem;
+}
+
+.cards-pack{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.pack-card{
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.35s;
+    text-align:center;
+}
+
+.pack-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(212,175,55,.25);
+    border-color: var(--brand-gold);
+}
+
+.pack-card img{
+    width:100%; 
+    height:300px;
+    object-fit:cover;
+    padding:15px;
+    background: var(--bg-alt);
+}
+
+.pack-card h3{
+    color: var(--heading-accent);
+    margin:18px 0 10px;
+    font-size:1.45rem;
+}
+
+.pack-card p{
+    color: var(--text-muted);
+    margin:0 20px 20px;
+}
+
+.pack-card .precio{
+    display:block;
+    font-size:2rem;
+    font-weight:bold;
+    color: var(--text);
+    margin-bottom:10px;
+}
+
+.pack-card .ahorro{
+    color: var(--brand-olive);
+    font-size:.9rem;
+    margin-bottom:25px;
+    font-weight: 600;
+}
+
+.pack-card button{
+    width:85%;
+    margin-bottom:25px;
+    padding:15px;
+    border:none;
+    border-radius:40px;
+    background: var(--brand-gold);
+    color:#1c1712;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    font-size:1rem;
+}
+
+.pack-card button:hover{
+    background: var(--brand-gold-light);
+    transform:scale(1.04)
+}
+
+@media(max-width:768px){
+
+    .cards-pack{
+        grid-template-columns:1fr;
+    }
+
+    .pack-card img{
+        height:240px;
+    }
+}
+
+/* ============================================================
+   PÁGINA: PRESUPUESTO (presupuesto.html)
+   (resumen del carrito, desglose de totales, entrega por ítem)
+============================================================ */
+
+.hero-presupuesto {
+  height: 60vh;
+  min-height: 400px;
+  background: url("../assets/img/carrusel/slide1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.carrito-resumen {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0 40px;
+}
+
+.carrito-resumen h3 {
+  color: var(--heading-accent);
+  margin-bottom: 15px;
+}
+
+#carrito-resumen-lista .carrito-item {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.btn-quitar {
+  background: transparent;
+  border: none;
+  color: #d64545;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+#carrito-descuento-info {
+  display: block;
+  margin-top: 15px;
+  color: var(--heading-accent);
+  font-size: .9rem;
+}
+
+.desglose-total {
+  max-width: 900px;
+  margin: 20px auto 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: 15px;
+  padding: 20px 25px;
+}
+
+.desglose-total p {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.carrito-item-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.carrito-item-entrega {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: .8rem;
+  font-weight: normal;
+  opacity: .9;
+}
+
+.carrito-item-entrega select {
+  width: auto;
+  padding: 6px 10px;
+  margin: 0;
+  font-size: .8rem;
+  border-radius: 6px;
+}
+
+
+/* ============================================================
+   PÁGINA: CONTACTO (contacto.html)
+   (mapa, controles de ruta, mensajes de estado)
+============================================================ */
+
+.hero-contacto {
+  height: 60vh;
+  min-height: 400px;
+  background: url("../assets/img/centros-operativos/CENTRO-LOG-GENOVA2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.controles-mapa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.controles-mapa label {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.controles-mapa select {
+  padding: 8px 12px;
+  border: 1px solid var(--heading-accent);
+  border-radius: 6px;
+  font-size: 14px;
+  background: var(--bg-card);
+  color: var(--text);
+}
+
+.mensaje-mapa {
+  min-height: 20px;
+  font-size: 14px;
+  margin: 6px 0 14px;
+  color: #6b6045;
+}
+
+.mensaje-mapa.error {
+  color: #b23a3a;
+}
+
+.mensaje-mapa.ok {
+  color: #3a7d44;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+}

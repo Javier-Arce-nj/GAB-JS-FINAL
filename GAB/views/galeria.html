@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | GETSEMANI A&amp;B</title>
+  <link rel="icon" type="image/jpeg" href="../assets/img/favicon-GAB.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/img/logo/logo-transparente.jpg" width="651" height="155" alt="Logotipo GETSEMANI A&amp;B" class="logo-img">
+        <div class="logo-text">
+          <!-- GETSEMANI A&amp;B
+          <br>
+          Premium Olive Oil &amp; Wines -->
+        </div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../views/galeria.html" class="activo">Galería</a></li>
+        <li><a href="../views/presupuesto.html">Presupuesto</a></li>
+        <li><a href="../views/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero hero-galeria">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Galería Premium</h1>
+      <p>Descubre nuestros olivares, vinos, instalaciones y exportación. Pulsa el 🛒 en tus productos favoritos para
+        añadirlos a tu selección.</p>
+    </div>
+  </section>
+
+<!-- ========================= 
+         PACK OLIO 
+   =========================== -->
+
+  <section>
+    <h2>🎁 Ofertas en Pack — Solo Aceites</h2>
+
+    <p class="subtitulo">
+      Compra en pack y ahorra todavía más sobre el precio de oferta de 15 € la botella.
+    </p>
+
+    <div class="cards-pack">
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo-2-aeite.jpg" width="1024" height="1024" alt="Pack 2 botellas de aceites">
+        <h3>Pack 2 Aceites</h3>
+        <p>2 botellas Premium</p>
+        <span class="precio">28 €</span>
+         <button type="button" class="btn-pack-add" data-id="pack-aceite-2" data-nombre="Pack 2 Aceites" data-categoria="aceite" data-precio="28">Añadir Pack</button>
+      </div>
+
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo-3-Aceite.jpg" width="1024" height="1024" alt="Pack de 3 aceitas regalos">
+        <h3>Pack 3 Aceites</h3>
+        <p>3 botellas Premium</p>
+        <span class="precio">40 €</span>
+         <button type="button" class="btn-pack-add" data-id="pack-aceite-3" data-nombre="Pack 3 Aceites" data-categoria="aceite" data-precio="40">Añadir Pack</button>
+      </div>
+
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo6.png" width="1024" height="1024" alt="Pack de 6 aceites de regalo">
+        <h3>Pack 6 Aceites</h3>
+        <p>6 botellas Premium</p>
+        <span class="precio">75 €</span>
+         <button type="button" class="btn-pack-add" data-id="pack-aceite-6" data-nombre="Pack 6 Aceites" data-categoria="aceite" data-precio="75">Añadir Pack</button>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ========================= 
+        PACK VINO 
+  ============================ -->
+
+  <section>
+    <h2>🍷 Ofertas en Pack — Solo Vinos</h2>
+
+    <p class="subtitulo">
+      Compra en pack y ahorra todavía más sobre el precio de oferta de 8 € la botella.
+    </p>
+
+    <div class="cards-pack">
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo-2-vino.jpg" width="1024" height="1024" alt="pack-regalo 2 botellas de vinos">
+        <h3>Pack 2 Vinos</h3>
+        <p>2 botellas Reserva</p>
+        <span class="precio">15 €</span>
+        <button type="button" class="btn-pack-add" data-id="pack-vino-2" data-nombre="Pack 2 Vinos" data-categoria="vino" data-precio="15">Añadir Pack</button> 
+      </div>
+
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo-3-vino.jpg" width="1024" height="1024" alt="pack-regalo 3 botellas de vinos">
+        <h3>Pack 3 Vinos</h3>
+        <p>3 botellas Reserva</p>
+        <span class="precio">22 €</span>
+         <button type="button" class="btn-pack-add" data-id="pack-vino-3" data-nombre="Pack 3 Vinos" data-categoria="vino" data-precio="22">Añadir Pack</button>
+      </div>
+
+      <div class="pack-card">
+        <img src="../assets/img/PACK-Regalos/pack-regalo-5-vino.jpg" width="1024" height="1024" alt="pack-regalo 5 botellas de vinos">
+        <h3>Pack 5 Vinos</h3>
+        <p>5 botellas Reserva</p>
+        <span class="precio">42 €</span>
+         <button type="button" class="btn-pack-add" data-id="pack-vino-5" data-nombre="Pack 5 Vinos" data-categoria="vino" data-precio="42">Añadir Pack</button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Colecciones</h2>
+     <div class="filtros">
+        <button type="button" onclick="filtrar('all')" class="btn activo" data-categoria="all">Todo</button>
+        <button type="button" onclick="filtrar('aceite')" class="btn" data-categoria="aceite">Aceites y Aceitunas</button>
+        <button type="button" onclick="filtrar('vino')" class="btn" data-categoria="vino">Vinos</button>
+        <button type="button" onclick="filtrar('ofertas')" class="btn" data-categoria="ofertas">Ofertas</button>
+        <button type="button" onclick="filtrar('empresa')" class="btn" data-categoria="empresa">Empresa</button>
+      </div>
+    <div class="cards">
+
+<!-- =========================
+        GALERIA ACEITES
+   ============================-->
+
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/aceite1.jpg" width="203" height="154" alt="Aceite premium">
+        <h3>Aceite Premium</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/aceite2.jpg" width="208" height="154" alt="Oliva virgen extra">
+        <h3>Oliva Virgen Extra</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_11.jpg" width="1098" height="1080" alt="OLIO ">
+        <h3>Aceituna Arbequina</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_12.jpg" width="1098" height="1080" alt="Aceite ecológico">
+        <h3>Aceite Ecológico</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_13.jpg" width="1098" height="1080" alt="Aceite frutado">
+        <h3>Aceite Frutado</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_14.jpg" width="969" height="641" alt="Aceite intenso">
+        <h3>Aceite Intenso</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_15.jpg" width="1098" height="1080" alt="Aceite suave">
+        <h3>Aceite Suave</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_16.jpg" width="1098" height="1080" alt="Aceite gourmet">
+        <h3>Aceite Gourmet</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_17.jpg" width="1098" height="1080" alt="Aceite reserva">
+        <h3>Aceite Reserva</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_18.jpg" width="1098" height="1080" alt="Aceite en botella de cristal">
+        <h3>Edición Especial</h3>
+      </div>
+      <div class="card foto aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_19.jpg" width="1098" height="1080" alt="Pack de aceites">
+        <h3>Pack Degustación</h3>
+      </div>
+
+<!-- =============================
+        GALERIA VINOS
+   =============================== -->
+
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vcannonau_21.jpg" width="1167" height="1080" alt="Chianti reserva">
+        <h3>Chianti Reserva</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vcannonau_22.jpg" width="1167" height="1080" alt="Rosso toscano">
+        <h3>Rosso Toscano</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vinotorbato_23.jpg" width="1098" height="1080" alt="Vino blanco toscano">
+        <h3>Bianco di Toscana</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_24.jpg" width="1098" height="1080" alt="Vino gourmet">
+        <h3>Selección Gourmet</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_25.jpg" width="1098" height="1080" alt="Vino reserva especial">
+        <h3>Reserva Especial</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_26.jpg" width="1098" height="1080" alt="Vino de exportación">
+        <h3>Edición Exportación</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_27.jpg" width="1098" height="1080" alt="Vino tinto premium">
+        <h3>Tinto Premium</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_28.jpg" width="1098" height="1080" alt="Vino añejado">
+        <h3>Añejado en Barrica</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_29.jpg" width="1098" height="1080" alt="Vino de autor">
+        <h3>Edición Limitada</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vinotorbato_23.jpg" width="1098" height="1080" alt="Vermentino Torbato">
+        <h3>Vermentino Torbato</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/vino1.jpg" width="203" height="154" alt="Vino de la casa">
+        <h3>Vino de la Casa</h3>
+      </div>
+      <div class="card foto vino">
+        <img src="../assets/img/galeria/galeria_vinos/vino2.jpg" width="234" height="154" alt="Oliva virgen extra">
+        <h3>Oliva Virgen Extra</h3>
+      </div>
+
+ <!-- =======================
+         OFERTAS
+  =========================== -->
+
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-aceite-vino.jpg" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-aceite6.jpg" width="1536" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-oferta-vino.jpg" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-oferta2jpg.png" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-regalo-(2).jpg" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/Pack-regalo.jpg" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-regalo4.jpg" width="1536" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-regalo5.jpg" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+          <img src="../assets/img/ofertas/pack-regalo6.png" width="1024" height="1024" alt="Vino espumante">
+          <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/vino1.jpg" width="203" height="154" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vinotorbato_23.jpg" width="1098" height="1080" alt="Vino Torbato">
+        <h3>Vermentino Torbato GAB</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_24.jpg" width="1098" height="1080" alt="Vino gourmet">
+        <h3>Selección Gourmet</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_25.jpg" width="1098" height="1080" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_26.jpg" width="1098" height="1080" alt="Vino reserva especial">
+        <h3>Reserva Especial</h3>
+      </div>
+      <div class="card foto ofertas vino">
+        <img src="../assets/img/galeria/galeria_vinos/prodotti_vino_27.jpg" width="1098" height="1080" alt="Vino tinto premium">
+        <h3>Tinto Premium</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/aceite1.jpg" width="203" height="154" alt="Aceite premium">
+        <h3>Aceite Premium</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/aceite2.jpg" width="208" height="154" alt="Vino espumante">
+        <h3>Aceite GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_11.jpg" width="1098" height="1080" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_12.jpg" width="1098" height="1080" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_13.jpg" width="1098" height="1080" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+        <img src="../assets/img/galeria/galeria_aceite/prodotti_olio_14.jpg" width="969" height="641" alt="Vino espumante">
+        <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+         <img src="../assets/img/PACK-Regalos/pack-regalo6.png" width="1024" height="1024" alt="Vino espumante">
+         <h3>Espumante GAB</h3>
+      </div>
+      <div class="card foto ofertas aceite">
+         <img src="../assets/img/PACK-Regalos/pack-regalo7.png" width="1024" height="1024" alt="Vino espumante">
+         <h3>Espumante GAB</h3>
+      </div>
+
+ <!-- ===========================================================
+        GALERIA EMPRESA (no comprable, solo informativo) 
+    ============================================================= -->
+
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/CENT-OPR-TOSCANA.jpg" width="864" height="611" alt="Instalaciones GAB">
+        <h3>Nuestras Instalaciones</h3>
+      </div>
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/CENTRO-LOG-GENOVA2.jpg" width="1356" height="493" alt="Equipo GAB trabajando">
+        <h3>Nuestro Equipo</h3>
+      </div>
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/index_carrusel_R(4)3.jpg" width="850" height="500" alt="Proceso de producción">
+        <h3>Proceso de Producción</h3>
+      </div>
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/Frantoio-viejo1.jpg" width="1536" height="1024" alt="Proceso de producción">
+        <h3>Proceso de Producción</h3>
+      </div>
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/GAB-vino1.jpg" width="1536" height="1024" alt="Proceso de producción">
+        <h3>Proceso de Producción</h3>
+      </div>
+      <div class="card foto empresa">
+        <img src="../assets/img/Empresa/Frantoio-toscana.jpg" width="1536" height="1024" alt="Proceso de producción">
+        <h3>Proceso de Producción</h3>
+      </div>
+    </div>
+  </section>
+
+  <div id="lightbox">
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+  </div>
+
+<!-- ===========================================
+         CARRITO FLOTANTE
+    ============================================ -->
+    
+  <div class="carrito-flotante">
+    <div class="carrito-panel" id="carrito-panel">
+      <h4>Tu selección</h4>
+      <div id="carrito-panel-lista"></div>
+      <div class="carrito-panel-footer">
+        <span>Subtotal</span>
+        <span id="carrito-subtotal-mini">0.00 €</span>
+      </div>
+      <a href="presupuesto.html" class="btn btn-bloque">
+        Ir a Presupuesto
+      </a>
+    </div>
+    <button type="button" class="carrito-boton" id="carrito-badge" onclick="toggleCarritoPanel()">
+      🛒 <span class="badge-numero" id="carrito-contador">0</span>
+    </button>
+  </div>
+
+  <a href="https://wa.me/39123456789" target="_blank" rel="noopener" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>GETSEMANI A&amp;B</h3>
+        <p>Premium Olive Oil &amp; Wines</p>
+      </div>
+      <div>
+        <h4>Sedes</h4>
+        <p>Toscana · Sardegna · Genova</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>info@getsemaniab.com</p>
+        <p>+39 123 456 789</p>
+      </div>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@TU_CANAL" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <p class="footer-legal">Aviso Legal · Política de Privacidad · Política de Cookies · Términos y Condiciones</p>
+    <p>© 2026 GETSEMANI A&amp;B</p>
+  </footer>
+
+  <script src="../js/carrito.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/galeria.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | GETSEMANI A&amp;B</title>
+  <link rel="icon" type="image/jpeg" href="../assets/img/favicon-GAB.jpg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/img/logo/logo-transparente.jpg" width="651" height="155" alt="Logotipo GETSEMANI A&amp;B" class="logo-img">
+        <div class="logo-text">
+          <!-- GETSEMANI A&amp;B
+          <br>
+          Premium Olive Oil &amp; Wines -->
+        </div>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../views/galeria.html">Galería</a></li>
+        <li><a href="../views/presupuesto.html">Presupuesto</a></li>
+        <li><a href="../views/contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero hero-contacto">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Contacto Internacional</h1>
+      <p>Estamos presentes en New york  Tokio  Seul  prosimas cedes en Toronto Miami India Nueva Zelada Australia.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Información de Contacto Italia</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="../assets/img/contacto/toscana.jpg" width="1080" height="595" alt="Oficina de Toscana">
+        <h3>📍 Toscana (Firenze)</h3>
+        <p>Via Roma 12R<br>Toscana - Italia</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/contacto/genova.jpg" width="582" height="301" alt="Oficina de Génova">
+        <h3>📍 Genova (Liguria)</h3>
+        <p>Via Gramsci 3R<br>Genova - Italia</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/contacto/cagliari.jpg" width="594" height="317" alt="Oficina de Cagliari">
+        <h3>📍 Cagliari (Sardegna)</h3>
+        <p>Via Sonnino 45R<br>Cagliari - Sardegna</p>
+      </div>
+    </div>
+  </section>
+  <section>
+
+    <h2>Información de Contacto Internacional</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="../assets/img/tiendas-mundo/tienda-ny.jpg" width="1080" height="595" alt="Oficina de Toscana">
+        <h3>📍 Toscana (Firenze)</h3>
+        <p>Via Roma 12R<br>Toscana - Italia</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/tiendas-mundo/tienda-seul.jpg" width="582" height="301" alt="Oficina de Génova">
+        <h3>📍 Genova (Liguria)</h3>
+        <p>Via Gramsci 3R<br>Genova - Italia</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/tiendas-mundo/tienda-tokio.jpg" width="594" height="317" alt="Oficina de Cagliari">
+        <h3>📍 Cagliari (Sardegna)</h3>
+        <p>Via Sonnino 45R<br>Cagliari - Sardegna</p>
+      </div>
+    </div>
+  </section>  
+
+
+<!-- ====================================================
+          MAPA + CALCULO DE RUTA
+  ======================================================= -->
+
+ <section>
+    <h2>Ubicación y Ruta</h2>
+
+    <div class="controles-mapa">
+      <label for="sedeSelect">Sede de destino</label>
+      <select id="sedeSelect">
+        <option value="toscana">Toscana — Via Roma 12R</option>
+        <option value="genova">Genova — Via Gramsci 3R</option>
+        <option value="cagliari">Cagliari — Via Sonnino 45R</option>
+      </select>
+
+
+      <button type="button" id="btnUbicacion" class="btn">
+        📍 Calcular ruta desde mi ubicación
+      </button>
+    </div>
+    <p class="mensaje-mapa" id="mensajeMapa"></p>
+    <div id="map"></div>
+  </section>
+
+  <a href="https://wa.me/39123456789" target="_blank" rel="noopener" class="whatsapp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+   <!-- ===========================================
+              FOOTER
+   ================================================ --> 
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>GETSEMANI A&amp;B</h3>
+        <p>Premium Olive Oil &amp; Wines</p>
+      </div>
+      <div>
+        <h4>Sedes</h4>
+        <p>Toscana · Sardegna · Genova</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>info@getsemaniab.com</p>
+        <p>+39 123 456 789</p>
+      </div>
+    </div>
+    <div class="social">
+      <a href="https://www.facebook.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/company/TU_PAGINA" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@TU_CANAL" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="footer-legal">Aviso Legal · Política de Privacidad · Política de Cookies · Términos y Condiciones</p>
+    <p>© 2026 GETSEMANI A&amp;B</p>
+  </footer>
+
+
+  <!-- ✔ Leaflet principal -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- ✔ Leaflet Routing Machine (NECESARIO para rutas reales) -->
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+
+  <script src="../js/contacto.js"></script>
+  <script src="../js/main.js"></script> 
+</body>
+
+</html>

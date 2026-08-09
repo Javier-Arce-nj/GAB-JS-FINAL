@@ -1,0 +1,1338 @@
+/* ==========================================
+GETSEMANI A&B (GAB)
+PREMIUM OLIVE OIL & WINES
+Inspirado en Seiko Watches
+CSS corregido y ordenado
+========================================== */
+
+
+/* ============================================================
+GLOBAL — COMÚN A TODAS LAS PÁGINAS
+============================================================ */
+
+
+/* =============
+Reset
+=============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #111111;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+
+/* ============================
+Navbar / Logo / Menú
+============================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    background: transparent;
+    transition: all .5s ease;
+    z-index: 9999;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, .85);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .4);
+    border-bottom: 1px solid rgba(212, 175, 55, .4);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 90px;
+    width: auto;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+.logo-g {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #D4AF37;
+}
+
+.logo-text {
+    font-size: .75rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: .4s;
+}
+
+.menu a:hover {
+    color: #D4AF37;
+}
+
+.activo {
+    color: #D4AF37 !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: white;
+    transition: .3s;
+}
+
+
+/* ============================================================
+Hero genérico
+============================================================ */
+
+.hero-galeria {
+    height: 60vh;
+    min-height: 400px;
+    background: url("../assets/img/GALE.PRESUP-CONT/index_carrusel_R(4)3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+    animation: fadeHero 2s ease;
+}
+
+.subtitle {
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    color: #D4AF37;
+    font-size: .9rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: #D4AF37;
+}
+
+.hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto auto 35px;
+}
+
+
+/* ====================
+Botón genérico
+===================== */
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #D4AF37;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .4s;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =======================================
+Estructura genérica de secciones
+========================================= */
+
+section {
+    padding: 50px 10%;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #D4AF37;
+}
+
+
+/* =========================================================
+Formularios base
+=========================================================== */
+
+form {
+    max-width: 900px;
+    margin: auto;
+}
+
+form h3 {
+    color: #D4AF37;
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.error {
+    display: block;
+    color: #ff4d4d;
+    margin-top: 5px;
+    font-size: .9rem;
+    min-height: 1.1em;
+}
+
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+
+/* ============================================================
+WhatsApp flotante
+============================================================== */
+
+.whatsapp {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    animation: pulse 2s infinite;
+}
+
+
+/* ========================
+Botón volver arriba
+========================== */
+
+#btnTop {
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #D4AF37;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+}
+
+
+/* ===============
+Footer
+================ */
+
+footer {
+    background: black;
+    padding: 60px 10%;
+    border-top: 2px solid #D4AF37;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+footer h3,
+footer h4 {
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.social {
+    margin: 25px 0;
+}
+
+.social a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social i {
+    font-size: 2rem;
+    margin: 0 12px;
+    cursor: pointer;
+    transition: .3s;
+    color: #a29e93;
+}
+
+.social i:hover {
+    color: #d5af33;
+    transform: translateY(-3px);
+}
+
+.footer-legal {
+    font-size: .85rem;
+    opacity: .8;
+    margin-top: 10px;
+}
+
+
+/* ==================
+Animaciones
+==================== */
+
+@keyframes fadeHero {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* ==================================================
+Responsive general
+==================================================== */
+
+@media (max-width: 992px) {
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: #111111;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 70px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+}
+
+
+/* ============================================================
+PÁGINA: INICIO
+============================================================ */
+
+
+/* ====================
+Carrusel del home
+====================== */
+
+.carousel {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease;
+    overflow: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoom-out img,
+.zoom-out.slide img {
+    transform: scale(0.82);
+    transform-origin: center;
+}
+
+
+/* =======================
+Banner internacional
+======================= */
+
+.banner {
+    background:
+        linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+        url("../assets/img/banner-export.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 70px;
+    text-align: center;
+}
+
+.banner h2 {
+    margin-bottom: 10px;
+}
+
+
+/* ======================================================
+Cards genéricas
+======================================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1b1b1b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, .3);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px 20px 0;
+    font-size: 1.4rem;
+    color: #D4AF37;
+}
+
+.card p {
+    padding: 10px 20px 20px;
+}
+
+
+/* =================
+Historia
+================== */
+
+.historia {
+    background: #181818;
+    text-align: center;
+}
+
+.historia p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1rem;
+    white-space: pre-line;
+}
+
+
+/* ===================================
+Sedes / tiendas
+====================================== */
+
+.negocios {
+    background: #111111;
+}
+
+.tiendas-mundo {
+    background: #181818;
+    margin-top: 60px;
+}
+
+.tiendas-mundo .card {
+    text-align: center;
+    padding: 30px;
+}
+
+.tiendas-mundo h3 {
+    font-size: 1.5rem;
+}
+
+
+/* ==========================
+Contadores
+=========================== */
+
+.contadores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background: #0b0b0b;
+    text-align: center;
+}
+
+.contador-box {
+    padding: 40px;
+}
+
+.contador-box h3 {
+    font-size: 4rem;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.contador-box p {
+    font-size: 1.1rem;
+}
+
+
+/* =================
+Sostenibilidad
+================== */
+
+.sostenibilidad {
+    background:
+        linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)),
+        url("../assets/img/sostenibilidad.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.sostenibilidad p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 1.1rem;
+    white-space: pre-line;
+}
+
+
+/* ==================================================
+Productos
+==================================================== */
+
+.productos {
+    background: #111111;
+}
+
+
+/* ================
+Noticias
+================= */
+
+.noticias {
+    background: #181818;
+}
+
+#noticias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+#noticias article {
+    background: #1b1b1b;
+    padding: 25px;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+#noticias article:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =====================
+Testimonios
+====================== */
+
+.testimonios {
+    background: #111111;
+}
+
+.testimonios-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+}
+
+.testimonial {
+    background: #1b1b1b;
+    padding: 30px 25px;
+    border-radius: 15px;
+    margin: 0;
+    flex: 1 1 280px;
+    max-width: 320px;
+    text-align: center;
+}
+
+.testimonial img {
+    width: 260px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #D4AF37;
+    margin: 0 auto;
+    display: block;
+}
+
+.testimonial h4 {
+    margin-top: 15px;
+    color: #D4AF37;
+}
+
+
+/* =========================================
+Contacto rápido
+========================================== */
+
+.contacto-rapido {
+    background: #181818;
+    text-align: center;
+}
+
+.contacto-rapido p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+
+/* =======================================
+Responsive específico del home
+======================================== */
+
+@media (max-width: 992px) {
+
+    .contadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contadores {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ============================================================
+PÁGINA: GALERÍA
+============================================================ */
+
+
+/* ---- Lightbox ---- */
+
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .95);
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    cursor: zoom-out;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #D4AF37;
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+GALERÍA — FILTROS
+============================================================ */
+
+.filtros {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* Botones normales */
+
+.filtros .btn {
+    margin: 0 6px 10px;
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    font-weight: 700;
+    text-shadow: none;
+    transition: all .3s ease;
+}
+
+
+/* ============================================================
+BOTÓN SELECCIONADO
+============================================================ */
+
+.filtros .btn.activo {
+    background: #D4AF37;
+    border: 2px solid #D4AF37;
+    color: #111111 !important;
+    font-weight: 700;
+    text-shadow: none;
+}
+
+
+/* Asegura el color del texto en todos los estados */
+
+.filtros .btn.activo,
+.filtros .btn.activo:hover,
+.filtros .btn.activo:focus,
+.filtros .btn.activo:active {
+    color: #111111 !important;
+    background: #D4AF37;
+}
+
+
+/* Cuando pasas el mouse */
+
+.filtros .btn:hover {
+    background: #D4AF37;
+    border-color: #D4AF37;
+    color: #111111 !important;
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+
+
+/* Si hay enlaces dentro */
+
+.filtros .btn a,
+.filtros .btn.activo a {
+    color: inherit !important;
+    text-decoration: none;
+}
+
+
+/* ---- Foto + botón añadir al carrito ---- */
+
+.foto {
+    position: relative;
+}
+
+.btn-carrito {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .65);
+    color: #D4AF37;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    z-index: 5;
+}
+
+.btn-carrito:hover {
+    background: #D4AF37;
+    color: black;
+    transform: scale(1.1);
+}
+
+.btn-carrito.added {
+    background: #556B2F;
+    color: white;
+}
+
+
+/* ---- Badge flotante del carrito ---- */
+
+.carrito-flotante {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+}
+
+.carrito-boton {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: #D4AF37;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+}
+
+.carrito-boton .badge-numero {
+    background: black;
+    color: #D4AF37;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+}
+
+.carrito-panel {
+    display: none;
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    background: #181818;
+    border: 1px solid rgba(212, 175, 55, .4);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.carrito-panel.show {
+    display: block;
+}
+
+.carrito-panel h4 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+.carrito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    font-size: .9rem;
+}
+
+.carrito-item-nombre {
+    flex: 1;
+}
+
+.carrito-item-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.carrito-item-controles button {
+    width: 26px;
+    height: 26px;
+    border: none;
+    border-radius: 50%;
+    background: #D4AF37;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.carrito-vacio {
+    opacity: .7;
+    font-size: .9rem;
+}
+
+.carrito-panel-footer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(212, 175, 55, .4);
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+/* ---- Precio + botón seleccionar ---- */
+
+.precio-box {
+    padding: 0 20px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.precio-original {
+    text-decoration: line-through;
+    opacity: .6;
+    font-size: .95rem;
+}
+
+.precio-oferta {
+    color: #D4AF37;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.precio-estandar {
+    color: #D4AF37;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.badge-oferta {
+    background: #556B2F;
+    color: white;
+    font-size: .7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.btn-seleccionar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background: #D4AF37;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-seleccionar:hover {
+    background: white;
+}
+
+.btn-seleccionar.added {
+    background: #556B2F;
+    color: white;
+}
+
+
+/* ============================================================
+NUEVAS CARDS DE OFERTAS
+ACEITES Y VINOS
+============================================================ */
+
+.subtitulo {
+    text-align: center;
+    color: #ddd;
+    margin: -15px auto 45px;
+    max-width: 700px;
+    font-size: 1rem;
+}
+
+.cards-pack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.pack-card {
+    background: #1a1a1a;
+    border: 1px solid rgba(212, 175, 55, .35);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .35s;
+    text-align: center;
+}
+
+.pack-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, .30);
+    border-color: #D4AF37;
+}
+
+.pack-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding: 15px;
+    background: #111;
+}
+
+.pack-card h3 {
+    color: #D4AF37;
+    margin: 18px 0 10px;
+    font-size: 1.45rem;
+}
+
+.pack-card p {
+    color: #ddd;
+    margin: 0 20px 20px;
+}
+
+.pack-card .precio {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.pack-card .ahorro {
+    color: #9ad36d;
+    font-size: .9rem;
+    margin-bottom: 25px;
+}
+
+.pack-card button {
+    width: 85%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+    background: #D4AF37;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 1rem;
+}
+
+.pack-card button:hover {
+    background: #f0c541;
+    transform: scale(1.04);
+}
+
+
+/* ============================================================
+PÁGINA: PRESUPUESTO
+============================================================ */
+
+.hero-presupuesto {
+    height: 60vh;
+    min-height: 400px;
+    background: url("../assets/img/carrusel/slide1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carrito-resumen {
+    background: #1b1b1b;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0 40px;
+}
+
+.carrito-resumen h3 {
+    color: #D4AF37;
+    margin-bottom: 15px;
+}
+
+#carrito-resumen-lista .carrito-item {
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.btn-quitar {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#carrito-descuento-info {
+    display: block;
+    margin-top: 15px;
+    color: #D4AF37;
+    font-size: .9rem;
+}
+
+.desglose-total {
+    max-width: 900px;
+    margin: 20px auto 0;
+    background: #1b1b1b;
+    border-radius: 15px;
+    padding: 20px 25px;
+}
+
+.desglose-total p {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+}
+
+.carrito-item-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.carrito-item-entrega {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    font-size: .8rem;
+    font-weight: normal;
+    opacity: .9;
+}
+
+.carrito-item-entrega select {
+    width: auto;
+    padding: 6px 10px;
+    margin: 0;
+    font-size: .8rem;
+    border-radius: 6px;
+}
+
+
+/* ============================================================
+PÁGINA: CONTACTO
+============================================================ */
+
+.hero-contacto {
+    height: 60vh;
+    min-height: 400px;
+    background: url("../assets/img/centros-operativos/CENTRO-LOG-GENOVA2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.controles-mapa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.controles-mapa label {
+    font-weight: bold;
+    color: #4a4130;
+}
+
+.controles-mapa select {
+    padding: 8px 12px;
+    border: 1px solid #c9a068;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fdfaf3;
+}
+
+.mensaje-mapa {
+    min-height: 20px;
+    font-size: 14px;
+    margin: 6px 0 14px;
+    color: #cccccc;
+}
+
+.mensaje-mapa.error {
+    color: #ff4d4d;
+}
+
+.mensaje-mapa.ok {
+    color: #3a7d44;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+RESPONSIVE — GALERÍA / OFERTAS / CARRITO
+============================================================ */
+
+@media (max-width: 768px) {
+
+    .cards-pack {
+        grid-template-columns: 1fr;
+    }
+
+    .pack-card img {
+        height: 240px;
+    }
+
+    .carrito-panel {
+        width: 280px;
+        max-width: calc(100vw - 40px);
+    }
+
+    .filtros .btn {
+        margin-bottom: 10px;
+    }
+}
