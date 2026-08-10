@@ -1,4 +1,14 @@
-# GETSEMANI A&B (GAB) — Proyecto final JavaScript
+# GETSEMANI A&B (GAB) — Plataforma Web Corporativa y Catálogo Interactivo
+
+## 📋 Descripción del Proyecto
+
+La arquitectura de archivos está organizada de manera modular para garantizar la separación de responsabilidades entre el marcado, la capa de estilos, la lógica del cliente y las fuentes de datos:
+
+**GETSEMANI A&B (GAB)** es una plataforma web corporativa orientada a la presentación, distribución y cotización de productos gastronómicos de alta gama, especializada en Aceites de Oliva Virgen Extra de autor y Vinos de Reserva.
+
+El proyecto ha sido desarrollado aplicando estándares modernos de desarrollo web (**HTML5 semántico, CSS3 modular y JavaScript Vanilla ES6+**), garantizando una arquitectura limpia, ligera, totalmente responsiva y optimizada para cualquier servidor de producción.
+
+---
 
 ## Estructura del proyecto
 
@@ -26,7 +36,6 @@ GAB/
     └── galeria/aceite1.jpg, aceite2.jpg, vino1.jpg, vino2.jpg, empresa1.jpg…empresa4.jpg
 ```
 
-⚠️ **Copia tus fotos reales dentro de `assets/img/` respetando exactamente estos nombres y subcarpetas**, o cambia las rutas en los `<img src="...">` de `index.html`, `galeria.html`, y las 3 rutas de fondo (`url(...)`) en `css/style.css` si prefieres otros nombres.
 
 ## Qué estaba roto y qué se corrigió
 
