@@ -481,7 +481,6 @@ footer h4 {
                 PÁGINA: INICIO
 ============================================================ */
 
-
 /* ============================
         Carrusel del home
 ============================== */
@@ -512,13 +511,6 @@ footer h4 {
     height: 100%;
     object-fit: cover;
 }
-
-.zoom-out img,
-.zoom-out.slide img {
-    transform: scale(0.82);
-    transform-origin: center;
-}
-
 
 /* ==============================
         Banner internacional
