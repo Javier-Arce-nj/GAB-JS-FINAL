@@ -1,14 +1,18 @@
 /* ===============================
-   GETSEMANI A&B – CONTACTO.JS
+    GETSEMANI A&B – CONTACTO.JS
 =============================== */
 
 let map;
 let rutaActiva = null;
 
+// Objeto de destinos incluyendo las sedes de Italia e internacionales
 const destinos = {
   "toscana": { lat: 43.771, lng: 11.255 },
   "genova": { lat: 44.411, lng: 8.932 },
-  "cagliari": { lat: 39.223, lng: 9.121 }
+  "cagliari": { lat: 39.223, lng: 9.121 },
+  "Nueva York": { lat: 40.7233, lng: -74.0030 },
+  "Tokio": { lat: 35.6721, lng: 139.7639 },
+  "Seul": { lat: 37.4979, lng: 127.0276 }
 };
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -19,10 +23,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const mensajeMapa = document.getElementById("mensajeMapa");
 
   /* =============================
-         Inicializar mapa
+          Inicializar mapa
    =============================== */
 
-  map = L.map(mapaDiv).setView([44.411, 8.932], 7);
+  map = L.map(mapaDiv).setView([44.411, 8.932], 4); // Zoom ajustado a 4 para abarcar una vista global
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
@@ -30,16 +34,17 @@ window.addEventListener("DOMContentLoaded", () => {
   }).addTo(map);
 
   /* =============================
-         Marcadores
+          Marcadores
    =============================== */
 
+  // Añade marcadores para todas las sedes (Italia + Internacionales)
   Object.keys(destinos).forEach(key => {
     const d = destinos[key];
     L.marker([d.lat, d.lng]).addTo(map);
   });
 
   /* ============================
-         Cambio de sede
+          Cambio de sede
    ============================== */
 
   selectDestino.addEventListener("change", () => {
@@ -47,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
     if (!valor || !destinos[valor]) return;
 
     const dest = destinos[valor];
-    map.setView([dest.lat, dest.lng], 10);
+    map.setView([dest.lat, dest.lng], 12); // Reencuadra hacia la sede seleccionada
 
     mensajeMapa.textContent = "Destino seleccionado. Puedes calcular la ruta desde tu ubicación.";
     mensajeMapa.className = "mensaje-mapa ok";
@@ -55,7 +60,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* ===================================
         Botón calcular ruta
-    ====================================*/ 
+   ====================================*/ 
   btnRuta.addEventListener("click", () => {
     const valor = selectDestino.value;
 
@@ -91,7 +96,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ============================
-         Ruta real
+          Ruta real
 =============================== */
 
 function calcularRuta(origen, destino, mensajeMapa) {
