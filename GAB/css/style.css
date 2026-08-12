@@ -1305,26 +1305,83 @@ footer h4 {
 }
 
 
-/* ============================================================
-        RESPONSIVE — GALERÍA / OFERTAS / CARRITO
-============================================================ */
+/* ============================================
+         ADAPTACIÓN PARA MÓVILES Y TABLETS
+   ============================================ */
 
 @media (max-width: 768px) {
 
-    .cards-pack {
-        grid-template-columns: 1fr;
-    }
+  /* 1. Ajuste del Carrusel en móviles */
+  .carousel, .carrusel, .slide-container {
+    height: 320px !important;
+  }
 
-    .pack-card img {
-        height: 240px;
-    }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover !important;
+    object-position: center;
+  }
 
-    .carrito-panel {
-        width: 280px;
-        max-width: calc(100vw - 40px);
-    }
+  /* 2. Fix para foto del Mapa e Historia en móviles */
+  .banner img,
+  .historia img {
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 250px !important;
+    object-fit: contain !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+  }
 
-    .filtros .btn {
-        margin-bottom: 10px;
-    }
+  /* 3. Convertir rejillas en 1 sola columna */
+  .grid-tiendas, 
+  .grid-productos, 
+  .centros-operativos-grid, 
+  .galeria-grid,
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  /* 4. Ajuste de imágenes en tarjetas (Sardeña, etc.) */
+  .card img,
+  .tarjeta img, 
+  .centro-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* 5. Menú de navegación móvil */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* 6. Ajustes de tipografía */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
 }
+
