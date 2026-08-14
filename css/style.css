@@ -10,7 +10,6 @@ CSS corregido y ordenado
          GLOBAL — COMÚN A TODAS LAS PÁGINAS
 ============================================================ */
 
-
 /* =============
        Reset
 =============== */
@@ -22,12 +21,26 @@ CSS corregido y ordenado
     scroll-behavior: smooth;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%; /* Evita que Samsung desajuste el tamaño de letra */
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #111111;
     color: #ffffff;
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+/* Ajuste global para evitar deformaciones en pantallas de alta resolución (Samsung A53/A54) */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 
@@ -1350,9 +1363,9 @@ footer h4 {
 
 @media (max-width: 768px) {
 
-  /* 1. Navbar: distribuye el espacio exactamente en los extremos */
+  /* 1. Header y Navbar */
   .navbar {
-    padding: 0 12px !important;
+    padding: 0 15px !important;
     height: 65px !important;
     display: flex !important;
     justify-content: space-between !important;
@@ -1363,34 +1376,37 @@ footer h4 {
   .logo {
     display: flex !important;
     align-items: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    max-width: 65% !important; /* Evita que el logo invada el espacio del menú */
+    max-width: 60% !important;
   }
 
-  /* Reducimos el alto y ancho del logo para que quede pequeño a la izquierda */
   .logo-img {
-    height: 32px !important;       /* Tamaño reducido para móvil */
+    height: 35px !important;
     width: auto !important;
-    max-width: 160px !important;   /* Controla el ancho máximo */
+    max-width: 160px !important;
     object-fit: contain !important;
     margin: 0 !important;
   }
 
-  /* Alineamos el menú hamburguesa a la derecha sin que nadie lo tape */
+  /* 2. Menú Hamburguesa (Las 3 líneas) */
   .hamburger {
     display: flex !important;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem !important;
-    color: #ffffff !important;
-    cursor: pointer;
-    z-index: 10001;
-    margin-left: auto !important; /* Empuja las 3 líneas totalmente a la derecha */
-    padding: 5px;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 28px !important;
+    height: 20px !important;
+    cursor: pointer !important;
+    z-index: 10001 !important;
   }
 
-  /* Menú desplegable al hacer clic */
+  .hamburger span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+  }
+
+  /* Desplegable del Menú Móvil */
   .menu {
     display: none;
     position: absolute;
@@ -1407,11 +1423,91 @@ footer h4 {
   .menu.show,
   .menu.active {
     display: flex !important;
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .menu li {
-    margin: 12px 0;
+    margin: 12px 0 !important;
+  }
+
+  /* 3. Ajuste de Imágenes (Nuestra Historia, Banners y Carrusel) */
+  .historia img,
+  .banner img,
+  .historia-imagen img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 280px !important;
+    object-fit: cover !important;
+    margin: 0 auto 15px auto !important;
+    display: block !important;
+    border-radius: 8px;
+  }
+
+  .carousel, .carrusel, .slide-container {
+    height: 260px !important;
+  }
+
+  /* 4. Formulario de Presupuesto Responsive */
+  .presupuesto-container,
+  .form-container,
+  form,
+  .presupuesto-grid {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .form-group, 
+  input[type="text"], 
+  input[type="email"], 
+  input[type="tel"], 
+  select, 
+  textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. Botones Flotantes (WhatsApp y Volver Arriba) */
+  .whatsapp, #btnTop {
+    position: fixed !important;
+    z-index: 99999 !important;
+  }
+
+  .whatsapp {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  #btnTop {
+    bottom: 80px !important;
+    right: 20px !important;
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+  }
+
+  /* 6. Grillas generales a 1 columna */
+  .grid-tiendas, 
+  .grid-productos, 
+  .centros-operativos-grid, 
+  .galeria-grid,
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+
+  body {
+    overflow-x: hidden !important;
   }
 }
 
