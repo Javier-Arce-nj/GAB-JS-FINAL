@@ -418,30 +418,51 @@ footer h4 {
     }
 }
 
+
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 0 20px;
+        padding: 0 15px !important;
+        height: 70px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Solución para el logo gigante en móvil */
+    .logo-img {
+        height: 42px !important;
+        width: auto !important;
+        margin-top: 0 !important;
     }
 
     .hamburger {
-        display: flex;
+        display: flex !important;
+        cursor: pointer;
+        z-index: 10001;
     }
 
     .menu {
         display: none;
         position: absolute;
-        top: 90px;
+        top: 70px;
         left: 0;
         width: 100%;
         background: #111111;
         padding: 20px;
         flex-direction: column;
         text-align: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+        z-index: 10000;
     }
 
     .menu.show {
-        display: flex;
+        display: flex !important;
     }
 
     .hero h1 {
@@ -457,7 +478,7 @@ footer h4 {
     }
 
     section {
-        padding: 70px 5%;
+        padding: 50px 5%;
     }
 }
 
@@ -1329,77 +1350,68 @@ footer h4 {
 
 @media (max-width: 768px) {
 
-  /* 1. Ajuste del Carrusel en móviles */
-  .carousel, .carrusel, .slide-container {
-    height: 320px !important;
+  /* 1. Navbar: distribuye el espacio exactamente en los extremos */
+  .navbar {
+    padding: 0 12px !important;
+    height: 65px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover !important;
-    object-position: center;
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 65% !important; /* Evita que el logo invada el espacio del menú */
   }
 
-  /* 2. Fix para foto del Mapa e Historia en móviles */
-  .banner img,
-  .historia img {
-    max-width: 100% !important;
-    height: auto !important;
-    max-height: 250px !important;
+  /* Reducimos el alto y ancho del logo para que quede pequeño a la izquierda */
+  .logo-img {
+    height: 32px !important;       /* Tamaño reducido para móvil */
+    width: auto !important;
+    max-width: 160px !important;   /* Controla el ancho máximo */
     object-fit: contain !important;
-    margin: 0 auto 15px auto !important;
-    display: block !important;
+    margin: 0 !important;
   }
 
-  /* 3. Convertir rejillas en 1 sola columna */
-  .grid-tiendas, 
-  .grid-productos, 
-  .centros-operativos-grid, 
-  .galeria-grid,
-  .cards {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
-    padding: 0 1rem;
+  /* Alineamos el menú hamburguesa a la derecha sin que nadie lo tape */
+  .hamburger {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem !important;
+    color: #ffffff !important;
+    cursor: pointer;
+    z-index: 10001;
+    margin-left: auto !important; /* Empuja las 3 líneas totalmente a la derecha */
+    padding: 5px;
   }
 
-  /* 4. Ajuste de imágenes en tarjetas (Sardeña, etc.) */
-  .card img,
-  .tarjeta img, 
-  .centro-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* 5. Menú de navegación móvil */
-  .nav-links {
+  /* Menú desplegable al hacer clic */
+  .menu {
     display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #ffffff;
     position: absolute;
-    top: 100%;
+    top: 65px;
     left: 0;
+    width: 100%;
+    background-color: #111111;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    z-index: 10000;
   }
 
-  .nav-links.active {
-    display: flex;
+  .menu.show,
+  .menu.active {
+    display: flex !important;
+    flex-direction: column;
   }
 
-  /* 6. Ajustes de tipografía */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  body {
-    overflow-x: hidden;
+  .menu li {
+    margin: 12px 0;
   }
 }
 
