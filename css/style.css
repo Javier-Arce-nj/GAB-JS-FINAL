@@ -424,91 +424,12 @@ footer h4 {
          Responsive general
 ========================================= */
 
-@media (max-width: 992px) {
-
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-}
 
 
-@media (max-width: 768px) {
 
-    .navbar {
-        padding: 0 15px !important;
-        height: 70px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
 
-    .logo {
-        display: flex !important;
-        align-items: center !important;
-    }
 
-    /* Solución para el logo gigante en móvil */
-    .logo-img {
-        height: 42px !important;
-        width: auto !important;
-        margin-top: 0 !important;
-    }
 
-    .hamburger {
-        display: flex !important;
-        cursor: pointer;
-        z-index: 10001;
-    }
-
-    .menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: #111111;
-        padding: 20px;
-        flex-direction: column;
-        text-align: center;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.8);
-        z-index: 10000;
-    }
-
-    .menu.show {
-        display: flex !important;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    section {
-        padding: 50px 5%;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .logo-text {
-        display: none;
-    }
-
-    .btn {
-        padding: 12px 25px;
-    }
-}
 
 
 /* ============================================================
@@ -576,12 +497,7 @@ footer h4 {
 }
 
 /* Adaptación para pantallas pequeñas / móviles */
-@media (max-width: 768px) {
-    .banner img {
-        max-width: 100%;
-        height: 250px;      /* Mantiene la forma rectangular pero ajustada al móvil */
-    }
-}
+
 
 /* ===================================
         Cards genéricas
@@ -806,19 +722,9 @@ footer h4 {
         Responsive específico del home
 ========================================== */
 
-@media (max-width: 992px) {
 
-    .contadores {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
-@media (max-width: 768px) {
 
-    .contadores {
-        grid-template-columns: 1fr;
-    }
-}
 
 
 /* ============================================================
@@ -1361,6 +1267,119 @@ footer h4 {
          ADAPTACIÓN PARA MÓVILES Y TABLETS
    ============================================ */
 
+
+/* ============================================================
+   MEDIA QUERIES (RESPONSIVE)
+   Todas las media queries del sitio, agrupadas aqui al final,
+   en el mismo orden en que aparecian en el archivo original.
+============================================================ */
+
+@media (max-width: 992px) {
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 15px !important;
+        height: 70px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Solución para el logo gigante en móvil */
+    .logo-img {
+        height: 42px !important;
+        width: auto !important;
+        margin-top: 0 !important;
+    }
+
+    .hamburger {
+        display: flex !important;
+        cursor: pointer;
+        z-index: 10001;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111111;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+        z-index: 10000;
+    }
+
+    .menu.show {
+        display: flex !important;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner img {
+        max-width: 100%;
+        height: 250px;      /* Mantiene la forma rectangular pero ajustada al móvil */
+    }
+}
+
+@media (max-width: 992px) {
+
+    .contadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contadores {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
 
   /* 1. Header y Navbar */
@@ -1510,4 +1529,3 @@ footer h4 {
     overflow-x: hidden !important;
   }
 }
-
