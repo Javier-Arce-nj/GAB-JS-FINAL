@@ -139,7 +139,7 @@ img {
 .hero-galeria {
     height: 60vh;
     min-height: 400px;
-    background: url("../assets/img/GALE.PRESUP-CONT/index_carrusel_R(4)3.jpg");
+    background: url("../assets/img/galeria.presup-cont/index_carrusel_R\(4\)3.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1200,7 +1200,7 @@ footer h4 {
 .hero-contacto {
     height: 60vh;
     min-height: 400px;
-    background: url("../assets/img/centros-operativos/CENTRO-LOG-GENOVA2.jpg");
+    background: url("../assets/img/empresa/centro-log-genova2.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
