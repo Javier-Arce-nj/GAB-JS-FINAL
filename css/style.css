@@ -420,17 +420,6 @@ footer h4 {
 }
 
 
-/* =======================================
-         Responsive general
-========================================= */
-
-
-
-
-
-
-
-
 
 /* ============================================================
                 PÁGINA: INICIO
@@ -495,8 +484,6 @@ footer h4 {
 .banner h2 {
     margin-bottom: 15px;
 }
-
-/* Adaptación para pantallas pequeñas / móviles */
 
 
 /* ===================================
@@ -641,6 +628,11 @@ footer h4 {
 
 .noticias {
     background: #181818;
+}
+    
+.fecha-noticia {
+  font-weight: bold;
+  color: #D4AF37;
 }
 
 #noticias {

@@ -109,7 +109,7 @@ if (noticias) {
           <article>
             <h3>${item.titulo}</h3>
             <p>${item.descripcion}</p>
-            <p><strong>${item.fecha}</strong></p>
+            <p><span class="fecha-noticia">${item.fecha}</span></p>
           </article>
         `;
       });
