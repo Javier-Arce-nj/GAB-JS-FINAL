@@ -157,3 +157,5 @@ galeriaItems.forEach(item => {
   item.style.transition = "all .8s ease";
   observerGaleria.observe(item);
 });
+
+

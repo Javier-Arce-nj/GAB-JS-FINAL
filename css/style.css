@@ -710,24 +710,14 @@ footer h4 {
 }
 
 
-/* =======================================
-        Responsive específico del home
-========================================== */
-
-
-
-
-
-
 /* ============================================================
         PÁGINA: GALERÍA
 ============================================================ */
 
-
 /* ---- Lightbox ---- */
 
 #lightbox {
-    display: none;
+    display: none; /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
@@ -740,13 +730,18 @@ footer h4 {
     cursor: zoom-out;
 }
 
+/* REGLA QUE: Muestra el lightbox al hacer clic */
+#lightbox.active {
+    display: flex;
+}
+
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
     border: 4px solid #D4AF37;
     border-radius: 10px;
+    object-fit: contain; /* Mantiene la proporción de la imagen sin deformarla */
 }
-
 
 /* ============================================================
         GALERÍA — FILTROS
@@ -813,7 +808,6 @@ footer h4 {
     color: inherit !important;
     text-decoration: none;
 }
-
 
 /* ---- Foto + botón añadir al carrito ---- */
 
